@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المادة الرقمية - نواف سلمان المطيري</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF9E6',
+                            300: '#FFE699',
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                            700: '#A16207',
+                            glow: '#FFD700',
+                        },
+                        darkbg: '#0A0A0B',
+                        darkcard: '#121215',
+                        glass: 'rgba(20, 20, 25, 0.7)'
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px -5px rgba(234, 179, 8, 0.3)',
+                        'gold-glow-lg': '0 0 40px -5px rgba(255, 215, 0, 0.5)',
+                        'gold-border': 'inset 0 0 0 1px rgba(234, 179, 8, 0.3)',
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #FFE57F 0%, #EAB308 50%, #996515 100%)',
+                        'gold-metallic': 'linear-gradient(145deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #08080a;
+            color: #f3f4f6;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFF099 0%, #FACC15 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-glass {
+            background: rgba(22, 22, 28, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(234, 179, 8, 0.25);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0d0d12;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ca8a04;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-black">
+
+    <!-- Header Navigation Section (قائمة واحدة - الرئيسية) -->
+    <header class="sticky top-0 z-50 bg-gold-glass border-b border-gold-500/30 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <div class="w-12 h-12 rounded-xl bg-gold-gradient p-0.5 shadow-gold-glow flex items-center justify-center">
+                    <div class="w-full h-full bg-black rounded-[10px] flex items-center justify-center">
+                        <span class="text-2xl font-black text-gold-400">💻</span>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold text-gradient-gold tracking-wide">المنصة الرقمية</h1>
+                    <p class="text-xs text-gold-300/80 font-medium">الصف الثاني متوسط - الفصل الدراسي الأول</p>
+                </div>
+            </div>
+
+            <!-- Single Main Navigation menu item -->
+            <nav class="flex items-center space-x-2 space-x-reverse">
+                <a href="#dashboard" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-gold-500/20 text-gold-300 border border-gold-500/40 hover:bg-gold-500 hover:text-black transition-all shadow-gold-glow flex items-center gap-2">
+                    <span>🏠</span> الرئيسية
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 flex-grow">
+
+        <!-- Student Attribution & Welcome Banner -->
+        <section id="dashboard" class="relative rounded-3xl p-6 sm:p-10 bg-gradient-to-r from-darkcard via-black to-darkcard border border-gold-500/40 shadow-gold-glow overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <!-- Student Name Banner Highlight -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-300 text-sm font-bold mb-4">
+                        <span>✨</span> عمل الطالب: <span class="text-gradient-gold text-base font-black">نواف سلمان المطيري</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-black text-white leading-relaxed">
+                        مرحباً بك في بوابة التقنية الرقمية
+                    </h2>
+                    <p class="text-gray-400 text-sm sm:text-base mt-2 max-w-2xl">
+                        منصة تفاعلية شاملة تضم دروس الفصل الدراسي الأول، الاختبارات التفاعلية، منصة الأفكار للموهوبين، والألعاب التعليمية الشيقة.
+                    </p>
+                </div>
+
+                <!-- Dashboard Stats Widget -->
+                <div class="w-full md:w-auto bg-black/60 border border-gold-500/30 rounded-2xl p-5 min-w-[280px]">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm font-bold text-gray-300">نظرة عامة على التقدم</span>
+                        <span id="progress-percent-text" class="text-lg font-black text-gold-400">0%</span>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden p-0.5 border border-gold-500/20 mb-4">
+                        <div id="main-progress-bar" class="bg-gold-gradient h-full rounded-full transition-all duration-500 w-0"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-400 border-t border-gray-800 pt-3">
+                        <div>الدروس المكتملة: <span id="completed-count" class="font-bold text-gold-300">0</span> / <span id="total-lessons-count" class="font-bold">6</span></div>
+                        <div>حالة الأداء: <span id="performance-status" class="text-gold-400 font-bold">مبتدئ</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Section (دروس المادة) -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gold-500/20 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">📚</span>
+                    <h3 class="text-2xl font-black text-gradient-gold">دروس المادة الرقمية</h3>
+                </div>
+                <span class="text-xs text-gold-400/80 bg-gold-500/10 px-3 py-1 rounded-lg border border-gold-500/20">الفصل الدراسي الأول</span>
+            </div>
+
+            <!-- Grid of Lessons -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="lessons-container">
+                <!-- Lessons will be rendered dynamically via JS -->
+            </div>
+        </section>
+
+        <!-- Interactive Exams Section (الاختبارات التفاعلية) -->
+        <section class="bg-darkcard border border-gold-500/30 rounded-3xl p-6 sm:p-8 shadow-gold-glow space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gold-500/20 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">📝</span>
+                    <div>
+                        <h3 class="text-2xl font-black text-gradient-gold">مركز الاختبارات والتقييم</h3>
+                        <p class="text-xs text-gray-400 mt-1">اختر نطاق الاختبار واختبر معلوماتك فورياً</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Controls Header -->
+            <div class="bg-black/50 p-5 rounded-2xl border border-gold-500/20 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="w-full md:w-auto space-y-1">
+                    <label class="block text-xs font-bold text-gold-300">تحديد الدروس المشمولة بالاختبار:</label>
+                    <select id="exam-lesson-select" class="w-full md:w-64 bg-darkbg border border-gold-500/40 rounded-xl px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-gold-400">
+                        <option value="all">جميع الدروس (اختبار شامل)</option>
+                        <!-- Dynamic options appended -->
+                    </select>
+                </div>
+                <button onclick="startExam()" class="w-full md:w-auto px-8 py-3 bg-gold-gradient text-black font-black rounded-xl hover:brightness-110 transition-all shadow-gold-glow flex items-center justify-center gap-2">
+                    <span>🚀</span> بدء الاختبار الآن
+                </button>
+            </div>
+
+            <!-- Exam Display Container -->
+            <div id="exam-display-area" class="hidden bg-black/70 rounded-2xl p-6 border border-gold-500/30 space-y-6">
+                <!-- Quiz dynamically injected -->
+            </div>
+        </section>
+
+        <!-- Ideas / Mawhiba Section (قسم الأفكار والموهبة) -->
+        <section class="bg-darkcard border border-gold-500/30 rounded-3xl p-6 sm:p-8 shadow-gold-glow space-y-8">
+            <div class="border-b border-gold-500/20 pb-4 flex items-center gap-3">
+                <span class="text-3xl">💡</span>
+                <div>
+                    <h3 class="text-2xl font-black text-gradient-gold">ركن الأفكار والموهبة الرقمية</h3>
+                    <p class="text-xs text-gray-400">مبتكرات وتطبيقات موهبة في عالم التقنية</p>
+                </div>
+            </div>
+
+            <!-- Original Mawhiba Idea Showcase Card -->
+            <div class="bg-gradient-to-br from-black via-darkbg to-gold-950/30 border border-gold-500/40 rounded-2xl p-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 bg-gold-gradient text-black text-xs font-black px-4 py-1 rounded-br-xl">فكرة أصيلة للموهوبين</div>
+                <div class="mt-2 space-y-3">
+                    <h4 class="text-xl font-bold text-gold-300 flex items-center gap-2">
+                        <span>🤖</span> المساعد الذكي لإعادة التدوير الإلكتروني (EcoTech AI)
+                    </h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        <strong>وصف الفكرة:</strong> تطبيق يدمج بين جدول البيانات الذكي وذكاء الرؤية الحاسوبية، يقوم بمسح الأجهزة الإلكترونية القديمة بالمنزل وتصنيف مكوناتها القابلة للتدوير حسابياً، ثم يصدر تقريراً تفاعلياً بوزن المعادن والنقاط المكتسبة للطالب لتعزيز الاستدامة الرقمية.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gold-400/90 pt-2">
+                        <span class="bg-black/60 px-3 py-1 rounded-md border border-gold-500/30">#الذكاء_الاصطناعي</span>
+                        <span class="bg-black/60 px-3 py-1 rounded-md border border-gold-500/30">#جداول_البيانات</span>
+                        <span class="bg-black/60 px-3 py-1 rounded-md border border-gold-500/30">#موهبة_2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Idea Input Form -->
+            <div class="bg-black/50 p-6 rounded-2xl border border-gold-500/20 space-y-4">
+                <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                    <span>✍️</span> شاركنا فكرتك الابتكارية
+                </h4>
+                <div class="space-y-3">
+                    <input type="text" id="idea-title" placeholder="عنوان الفكرة الابتكارية..." class="w-full bg-darkbg border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-gold-400">
+                    <textarea id="idea-desc" rows="3" placeholder="اشرح فكرتك التقنية بالتفصيل..." class="w-full bg-darkbg border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-gray-200 focus:outline-none focus:border-gold-400"></textarea>
+                    <button onclick="saveStudentIdea()" class="px-6 py-2.5 bg-gold-gradient text-black font-extrabold rounded-xl hover:brightness-110 transition-all text-sm flex items-center gap-2">
+                        <span>💾</span> حفظ الفكرة في المنصة
+                    </button>
+                </div>
+
+                <!-- Saved Ideas Container -->
+                <div class="pt-4 border-t border-gray-800">
+                    <h5 class="text-sm font-bold text-gold-300 mb-3">الأفكار المحفوظة للطالب:</h5>
+                    <div id="saved-ideas-list" class="space-y-3">
+                        <p class="text-xs text-gray-500 italic">لا توجد أفكار محفوظة حالياً. كن أول من يبتكر!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Games Section (الألعاب التعليمية الثلاث) -->
+        <section class="bg-darkcard border border-gold-500/30 rounded-3xl p-6 sm:p-8 shadow-gold-glow space-y-8">
+            <div class="border-b border-gold-500/20 pb-4 flex items-center gap-3">
+                <span class="text-3xl">🎮</span>
+                <div>
+                    <h3 class="text-2xl font-black text-gradient-gold">الألعاب الرقمية التعليمية</h3>
+                    <p class="text-xs text-gray-400">ثبّت مفاهيمك التقنية مع الألعاب التفاعلية الثلاث</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Game 1: Matching Game -->
+                <div class="bg-black/60 border border-gold-500/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-gold-300 flex items-center gap-2">🎯 لعبة المطابقة الرقمية</h4>
+                            <span class="text-xs bg-gold-500/20 text-gold-400 px-2 py-0.5 rounded">لعبة 1</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4">صل المصطلحات الرقمية بالدالة أو المفهوم المناسب لها.</p>
+
+                        <div id="game1-container" class="space-y-3">
+                            <!-- JS Dynamic matching logic -->
+                        </div>
+                    </div>
+                    <button onclick="initGame1()" class="w-full py-2 bg-gold-500/20 hover:bg-gold-500 text-gold-300 hover:text-black border border-gold-500/40 font-bold text-xs rounded-xl transition-all">
+                        إعادة تشغيل اللعبة 🔄
+                    </button>
+                </div>
+
+                <!-- Game 2: True/False Speed Game -->
+                <div class="bg-black/60 border border-gold-500/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-gold-300 flex items-center gap-2">⚡ لعبة صح أو خطأ السريعة</h4>
+                            <span class="text-xs bg-gold-500/20 text-gold-400 px-2 py-0.5 rounded">لعبة 2</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4">أجب بسرعة عن العبارة التقنية الظاهرة أمامك.</p>
+
+                        <div id="game2-container" class="bg-darkbg p-4 rounded-xl border border-gray-800 space-y-4 min-h-[160px] flex flex-col justify-center">
+                            <!-- Dynamic Content -->
+                        </div>
+                    </div>
+                    <div id="game2-score" class="text-xs font-bold text-center text-gold-400">النقاط: 0</div>
+                </div>
+
+                <!-- Game 3: Formula Sequence Ordering -->
+                <div class="bg-black/60 border border-gold-500/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-gold-300 flex items-center gap-2">🧩 ترتيب خطو ات معادلات Excel</h4>
+                            <span class="text-xs bg-gold-500/20 text-gold-400 px-2 py-0.5 rounded">لعبة 3</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-4">رتب أجزاء الصيغة الرياضية بالترتيب الصحيح لكتابتها بالجدول.</p>
+
+                        <div id="game3-container" class="space-y-3">
+                            <!-- Dynamic Ordering Game -->
+                        </div>
+                    </div>
+                    <button onclick="checkGame3()" class="w-full py-2 bg-gold-gradient text-black font-bold text-xs rounded-xl shadow-gold-glow hover:brightness-110">
+                        التحقق من الترتيب ✅
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gold-500/20 bg-black/90 py-6 text-center text-xs text-gray-500 space-y-2">
+        <p>تم التطوير والإنتاج لمادة التقنية الرقمية - الصف الثاني متوسط - الفصل الأول</p>
+        <p class="text-gold-400/80 font-bold">إعداد الطالب: نواف سلمان المطيري ✨</p>
+    </footer>
+
+    <!-- Application Script -->
+    <script>
+        // Data Structure for 2nd Intermediate Term 1 Digital Technology Lessons
+        const lessonsData = [
+            {
+                id: 1,
+                title: "جمع البيانات والمعلومات",
+                summary: "يتناول الدرس الفرق الجوهري بين البيانات (Data) وهي الأرقام والحقائق الخام، والمعلومات (Information) وهي البيانات بعد معالجتها وتنظيمها لإعطاء معنى مفيد. كما يستعرض طرق جمع البيانات الأولية والثانوية وأهمية موثوقية المصادر.",
+                points: [
+                    "البيانات هي المادة الخام وتفتقر للمعنى المباشر.",
+                    "المعلومات هي ناتج معالجة البيانات وتحليلها.",
+                    "أدوات جمع البيانات: الاستبيانات، الملاحظة، المقابلات، وأجهزة الاستشعار."
+                ],
+                questions: [
+                    { q: "ما هي البيانات؟", options: ["معلومات جاهزة واتخاذ قرار", "حقائق وأرقام خام غير معالجة", "برامج الكمبيوتر"], correct: 1 },
+                    { q: "أي مما يلي يُعد من وسائل جمع البيانات؟", options: ["الاستبيانات والمسوح", "إغلاق الحاسب", "تغيير الشاشة"], correct: 0 },
+                    { q: "المعلومات هي:", options: ["الصور فقط", "بيانات تم تنظيمها ومعالجتها", "البيانات المفقودة"], correct: 1 }
+                ]
+            },
+            {
+                id: 2,
+                title: "معالجة البيانات ببرنامج Excel",
+                summary: "يركز على كيفية تنظيم البيانات الرقمية داخل جداول البيانات الإلكترونية (Excel)، والتعامل مع الصفوف والأعمدة والخلايا وتنسيق البيانات لسهولة القراءة والتحليل.",
+                points: [
+                    "تتكون الورقة من أعمدة (أحرف) وصفوف (أرقام).",
+                    "الخلية هي نقطة تقاطع الصف مع العمود (مثل A1).",
+                    "أنواع البيانات في Excel: نصوص، أرقام، تواريخ، وصيغ."
+                ],
+                questions: [
+                    { q: "رمز تقاطع الصف والعمود يسمى:", options: ["مخطط", "خلية (Cell)", "شريط الأدوات"], correct: 1 },
+                    { q: "يتم ترميز الأعمدة في Excel بـ:", options: ["الأرقام", "الأحرف الإنجليزية", "الرموز الخاصة"], correct: 1 },
+                    { q: "لإدخال نص أو رقم نضغط على الخلية ثم نكتب المكونات مباشرة.", options: ["صحيح", "خطأ", "غير معروف"], correct: 0 }
+                ]
+            },
+            {
+                id: 3,
+                title: "الصيغ والدوال الأساسية (SUM, AVERAGE)",
+                summary: "شرح كيفية إنشاء الصيغ الحسابية وتبدأ دائماً بعلامة (=)، وتطبيق الدوال الجاهزة مثل دالة الجمع التلقائي (SUM) ودالة المتوسط الحسابي (AVERAGE) للتحليل السريع.",
+                points: [
+                    "تبدأ كل صيغة في Excel بعلامة اليساوي (=).",
+                    "دالة SUM تستخدم لحساب مجموع قيم الخلايا المحدد.",
+                    "دالة AVERAGE تحسب متوسط مجموعة من الأرقام."
+                ],
+                questions: [
+                    { q: "رمز بداية أي صيغة حسابية في Excel هو:", options: ["+", "=", "*"], correct: 1 },
+                    { q: "الدالة المستخدمة لحساب مجموع القيم هي:", options: ["MAX", "AVERAGE", "SUM"], correct: 2 },
+                    { q: "دالة AVERAGE تُرجع:", options: ["أكبر قيمة", "المتوسط الحسابي", "عدد الخلايا"], correct: 1 }
+                ]
+            },
+            {
+                id: 4,
+                title: "الدوال الشرطية (IF) والدوال الرياضية (MIN, MAX)",
+                summary: "استخدام دالة IF اتخاذ القرار الشرطي تلقائياً بالجدول، واستخراج أعلى قيمة وأقل قيمة من بين مئات البيانات باستخدام الدالتين MAX و MIN.",
+                points: [
+                    "دالة IF تتحقق من شرط معين وترجع قيمة إذا كان صحيحاً وأخرى إذا كان خاطئاً.",
+                    "دالة MAX تعيد أكبر قيمة عدادية في النطاق.",
+                    "دالة MIN تعيد أصغر قيمة عدادية في النطاق."
+                ],
+                questions: [
+                    { q: "لإيجاد أعلى درجة لطالب نستخدم دالة:", options: ["MIN", "MAX", "IF"], correct: 1 },
+                    { q: "تُستخدم دالة IF لـ:", options: ["رسم المخطط", "التحقق من شرط محدد", "حذف الصفوف"], correct: 1 },
+                    { q: "دالة MIN تُرجع أعدل قيمة متوسطة.", options: ["صحيح", "خطأ (تُرجع أصغر قيمة)", "تُرجع المجموع"], correct: 1 }
+                ]
+            },
+            {
+                id: 5,
+                title: "المخططات البيانية (Charts) وتنسيقها",
+                summary: "تحويل البيانات الرقمية الجافة إلى تمثيل بصري جذاب وسهل الفهم باستخدام المخططات العمودية، الدائرية، والشريطية لخلق تقارير رقمية احترافية.",
+                points: [
+                    "المخطط البياني هو تمثيل مصور لبيانات الجدول.",
+                    "المخطط الدائري مناسب لمعرفة النسب المئوية للكل.",
+                    "المخطط العمودي يفضل للمقارنة بين الفئات."
+                ],
+                questions: [
+                    { q: "أفضل مخطط لمقارنة أداء الفصول هو:", options: ["العمودي (Column)", "الخطي فقط", "بدون مخطط"], correct: 0 },
+                    { q: "يساعد المخطط البياني في:", options: ["تبطئ البرنامج", "فهم البيانات بشكل سريع وبصري", "حذف الخلايا"], correct: 1 },
+                    { q: "تستطيع تغيير ألوان وتصميم المخطط بعد إدراجه.", options: ["صحيح", "خطأ", "لا يمكن"], correct: 0 }
+                ]
+            },
+            {
+                id: 6,
+                title: "التصميم الممتع للرسوم والإنفوجرافيك",
+                summary: "مبادئ تصميم الملصقات الرقمية والإنفوجرافيك التعليمي، واختيار الألوان المتناسقة والخطوط الواضحة ونقل الأفكار المعقدة بتصاميم بصرية بسيطة.",
+                points: [
+                    "الإنفوجرافيك يدمج النصوص بالصور لتوصيل فكرة بأسلوب ممتع.",
+                    "التناسق البصري والتوازن وتناغم الألوان أساس نجاح التصميم.",
+                    "عدم إغراق التصميم بالنصوص الطويلة والتركيز على الرموز."
+                ],
+                questions: [
+                    { q: "الهدف من الإنفوجرافيك هو:", options: ["تبسيط المعلومات بصرياً", "تعقيد القراءة", "إلغاء الصور"], correct: 0 },
+                    { q: "عنصر هام في التصميم الرقمي الجيد:", options: ["التناسق اللوني والوضوح", "استخدام 10 خطوط مختلفة", "تعبئة الشاشة بنصوص فقط"], correct: 0 },
+                    { q: "التوازن البصري يعني توزيع العناصر بشكل مريح للعين.", options: ["صحيح", "خطأ", "غير مهم"], correct: 0 }
+                ]
+            }
+        ];
+
+        // State Management
+        let completedLessons = JSON.parse(localStorage.getItem('completedLessons_nawaf')) || [];
+        let savedIdeas = JSON.parse(localStorage.getItem('savedIdeas_nawaf')) || [];
+
+        // Initialize App on DOM Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderLessons();
+            updateProgress();
+            populateExamSelect();
+            renderSavedIdeas();
+            initGame1();
+            initGame2();
+            initGame3();
+        });
+
+        // Render Lessons
+        function renderLessons() {
+            const container = document.getElementById('lessons-container');
+            container.innerHTML = '';
+
+            lessonsData.forEach(lesson => {
+                const isCompleted = completedLessons.includes(lesson.id);
+
+                let questionsHTML = lesson.questions.map((q, qIndex) => `
+                    <div class="bg-black/40 p-3 rounded-xl border border-gold-500/10 space-y-2 text-xs">
+                        <p class="font-bold text-gray-200">${qIndex + 1}. ${q.q}</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            ${q.options.map((opt, optIndex) => `
+                                <button onclick="checkLessonAnswer(this, ${q.correct === optIndex})" 
+                                        class="py-1.5 px-2 bg-darkbg border border-gray-700 hover:border-gold-400 rounded-lg text-gray-300 hover:text-white transition-all text-right text-[11px]">
+                                    ${opt}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+
+                const card = document.createElement('div');
+                card.className = `bg-darkcard border ${isCompleted ? 'border-gold-400 bg-gold-950/10' : 'border-gold-500/20'} rounded-2xl p-6 shadow-md transition-all space-y-4 hover:border-gold-500/50`;
+                
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+                        <span class="text-xs font-bold px-3 py-1 bg-gold-500/10 text-gold-400 rounded-full border border-gold-500/20">الدرس ${lesson.id}</span>
+                        <span id="badge-status-${lesson.id}" class="text-xs font-bold ${isCompleted ? 'text-green-400' : 'text-gray-500'}">
+                            ${isCompleted ? '✓ مكتمل' : '⏳ قيد التعلّم'}
+                        </span>
+                    </div>
+
+                    <h4 class="text-xl font-extrabold text-white">${lesson.title}</h4>
+                    <p class="text-xs text-gray-300 leading-relaxed">${lesson.summary}</p>
+
+                    <div class="bg-black/50 p-3 rounded-xl border border-gold-500/10">
+                        <h5 class="text-xs font-bold text-gold-300 mb-2">📌 نقاط أساسية:</h5>
+                        <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
+                            ${lesson.points.map(pt => `<li>${pt}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <h5 class="text-xs font-bold text-gold-400">❓ اختبر نفسك سريعاً (3 أسئلة):</h5>
+                        ${questionsHTML}
+                    </div>
+
+                    <button onclick="toggleLessonComplete(${lesson.id})" 
+                            id="btn-complete-${lesson.id}"
+                            class="w-full py-3 rounded-xl font-black text-xs transition-all shadow-gold-glow flex items-center justify-center gap-2 ${
+                                isCompleted 
+                                ? 'bg-gray-800 text-gray-300 border border-gray-700 hover:bg-red-900/30' 
+                                : 'bg-gold-gradient text-black hover:brightness-110'
+                            }">
+                        <span>${isCompleted ? '❌ إلغاء تحديد الإكمال' : '✅ إكمال الدرس وحفظ التقدم'}</span>
+                    </button>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Answer Feedback for Lesson Quiz
+        function checkLessonAnswer(btn, isCorrect) {
+            const parent = btn.parentElement;
+            Array.from(parent.children).forEach(b => {
+                b.classList.remove('bg-green-600', 'bg-red-600', 'text-white');
+            });
+            if (isCorrect) {
+                btn.classList.add('bg-green-600', 'text-white');
+            } else {
+                btn.classList.add('bg-red-600', 'text-white');
+            }
+        }
+
+        // Toggle Lesson Progress
+        function toggleLessonComplete(lessonId) {
+            if (completedLessons.includes(lessonId)) {
+                completedLessons = completedLessons.filter(id => id !== lessonId);
+            } else {
+                completedLessons.push(lessonId);
+            }
+            localStorage.setItem('completedLessons_nawaf', JSON.stringify(completedLessons));
+            renderLessons();
+            updateProgress();
+        }
+
+        // Update Student Progress Dashboard
+        function updateProgress() {
+            const total = lessonsData.length;
+            const completed = completedLessons.length;
+            const percent = Math.round((completed / total) * 100);
+
+            document.getElementById('completed-count').innerText = completed;
+            document.getElementById('total-lessons-count').innerText = total;
+            document.getElementById('progress-percent-text').innerText = `${percent}%`;
+            document.getElementById('main-progress-bar').style.width = `${percent}%`;
+
+            const statusEl = document.getElementById('performance-status');
+            if (percent === 100) statusEl.innerText = "متميز ⭐";
+            else if (percent >= 50) statusEl.innerText = "متقدم 👍";
+            else statusEl.innerText = "مبتدئ 🚀";
+        }
+
+        // Populate Exam Select Dropdown
+        function populateExamSelect() {
+            const select = document.getElementById('exam-lesson-select');
+            lessonsData.forEach(l => {
+                const opt = document.createElement('option');
+                opt.value = l.id;
+                opt.innerText = `الدرس ${l.id}: ${l.title}`;
+                select.appendChild(opt);
+            });
+        }
+
+        // Interactive Exam System
+        let currentExamQuestions = [];
+        function startExam() {
+            const val = document.getElementById('exam-lesson-select').value;
+            const area = document.getElementById('exam-display-area');
+            area.classList.remove('hidden');
+
+            if (val === 'all') {
+                currentExamQuestions = lessonsData.flatMap(l => l.questions);
+            } else {
+                const lesson = lessonsData.find(l => l.id == val);
+                currentExamQuestions = lesson ? lesson.questions : [];
+            }
+
+            let examHTML = `
+                <div class="flex items-center justify-between border-b border-gold-500/30 pb-3">
+                    <h4 class="font-bold text-gold-300">الاختبار التفاعلي (${currentExamQuestions.length} سؤال)</h4>
+                    <span class="text-xs text-gray-400">اختر الإجابة الصحيحة</span>
+                </div>
+                <form id="exam-form" class="space-y-6">
+            `;
+
+            currentExamQuestions.forEach((q, idx) => {
+                examHTML += `
+                    <div class="space-y-2 bg-black/40 p-4 rounded-xl border border-gray-800">
+                        <p class="text-sm font-bold text-white">${idx + 1}. ${q.q}</p>
+                        <div class="space-y-1.5">
+                            ${q.options.map((opt, oIdx) => `
+                                <label class="flex items-center gap-3 p-2 bg-darkbg rounded-lg border border-gray-800 cursor-pointer hover:border-gold-500/50 text-xs text-gray-300">
+                                    <input type="radio" name="q_${idx}" value="${oIdx}" class="accent-gold-500">
+                                    <span>${opt}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+
+            examHTML += `
+                <button type="button" onclick="submitExam()" class="w-full py-3 bg-gold-gradient text-black font-black rounded-xl hover:brightness-110 shadow-gold-glow">
+                    تسليم الاختبار واعتماد النتيجة 🏆
+                </button>
+                <div id="exam-result" class="hidden text-center p-4 rounded-xl font-bold"></div>
+            </form>`;
+
+            area.innerHTML = examHTML;
+        }
+
+        function submitExam() {
+            let score = 0;
+            currentExamQuestions.forEach((q, idx) => {
+                const selected = document.querySelector(`input[name="q_${idx}"]:checked`);
+                if (selected && parseInt(selected.value) === q.correct) {
+                    score++;
+                }
+            });
+
+            const resultDiv = document.getElementById('exam-result');
+            resultDiv.classList.remove('hidden');
+            const percentage = Math.round((score / currentExamQuestions.length) * 100);
+
+            if (percentage >= 80) {
+                resultDiv.className = "text-center p-4 rounded-xl font-bold bg-green-950/80 text-green-400 border border-green-500";
+                resultDiv.innerText = `درجة ممتازة! حصلت على ${score} من ${currentExamQuestions.length} (${percentage}%) 🎖️`;
+            } else {
+                resultDiv.className = "text-center p-4 rounded-xl font-bold bg-gold-950/80 text-gold-300 border border-gold-500";
+                resultDiv.innerText = `نتيجة طيبة! حصلت على ${score} من ${currentExamQuestions.length} (${percentage}%). يمكنك المراجعة والمحاولة مجدداً.`;
+            }
+        }
+
+        // Student Ideas Storage
+        function saveStudentIdea() {
+            const title = document.getElementById('idea-title').value.trim();
+            const desc = document.getElementById('idea-desc').value.trim();
+
+            if (!title || !desc) {
+                alert("يرجى كتابة عنوان وفكرة الابتكار أولاً!");
+                return;
+            }
+
+            savedIdeas.push({ title, desc, date: new Date().toLocaleDateString('ar-SA') });
+            localStorage.setItem('savedIdeas_nawaf', JSON.stringify(savedIdeas));
+
+            document.getElementById('idea-title').value = '';
+            document.getElementById('idea-desc').value = '';
+
+            renderSavedIdeas();
+        }
+
+        function renderSavedIdeas() {
+            const list = document.getElementById('saved-ideas-list');
+            if (savedIdeas.length === 0) {
+                list.innerHTML = `<p class="text-xs text-gray-500 italic">لا توجد أفكار محفوظة حالياً. كن أول من يبتكر!</p>`;
+                return;
+            }
+
+            list.innerHTML = savedIdeas.map((idea, i) => `
+                <div class="bg-darkbg p-3.5 rounded-xl border border-gold-500/20 space-y-1">
+                    <div class="flex justify-between items-center">
+                        <h6 class="text-xs font-bold text-gold-300">${idea.title}</h6>
+                        <span class="text-[10px] text-gray-500">${idea.date}</span>
+                    </div>
+                    <p class="text-xs text-gray-300">${idea.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        // GAME 1: Matching Terms Logic
+        const game1Pairs = [
+            { term: "=SUM", match: "جمع القيم التلقائي" },
+            { term: "=AVERAGE", match: "حساب المتوسط الحسابي" },
+            { term: "A1", match: "عنوان الخلية" },
+            { term: "=IF", match: "اتخاذ القرار الشرطي" }
+        ];
+        let selectedGame1Term = null;
+
+        function initGame1() {
+            const container = document.getElementById('game1-container');
+            container.innerHTML = `
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="space-y-2" id="g1-terms"></div>
+                    <div class="space-y-2" id="g1-matches"></div>
+                </div>
+                <div id="g1-msg" class="text-[11px] text-center text-gold-400 font-bold min-h-[18px]"></div>
+            `;
+
+            const termsBox = document.getElementById('g1-terms');
+            const matchesBox = document.getElementById('g1-matches');
+
+            const shuffledMatches = [...game1Pairs].sort(() => Math.random() - 0.5);
+
+            game1Pairs.forEach(p => {
+                const btn = document.createElement('button');
+                btn.className = "w-full p-2 bg-darkbg border border-gray-700 rounded-lg text-gold-300 hover:border-gold-400 transition-all text-center font-mono";
+                btn.innerText = p.term;
+                btn.onclick = () => selectG1Term(btn, p.term);
+                termsBox.appendChild(btn);
+            });
+
+            shuffledMatches.forEach(p => {
+                const btn = document.createElement('button');
+                btn.className = "w-full p-2 bg-darkbg border border-gray-700 rounded-lg text-gray-300 hover:border-gold-400 transition-all text-center";
+                btn.innerText = p.match;
+                btn.onclick = () => checkG1Match(btn, p.match);
+                matchesBox.appendChild(btn);
+            });
+        }
+
+        function selectG1Term(btn, term) {
+            document.querySelectorAll('#g1-terms button').forEach(b => b.classList.remove('border-gold-400', 'bg-gold-500/20'));
+            btn.classList.add('border-gold-400', 'bg-gold-500/20');
+            selectedGame1Term = term;
+        }
+
+        function checkG1Match(btn, matchText) {
+            if (!selectedGame1Term) {
+                document.getElementById('g1-msg').innerText = "حدد مصطلحاً من العمود الأيمن أولاً!";
+                return;
+            }
+            const pair = game1Pairs.find(p => p.term === selectedGame1Term);
+            if (pair && pair.match === matchText) {
+                btn.classList.add('bg-green-600', 'text-white');
+                document.getElementById('g1-msg').innerText = "إجابة صحيحة! 👏";
+            } else {
+                btn.classList.add('bg-red-600', 'text-white');
+                document.getElementById('g1-msg').innerText = "حاول مرة أخرى!";
+            }
+        }
+
+        // GAME 2: Fast True/False Game Logic
+        const game2Questions = [
+            { text: "تبدأ جميع الصيغ في برنامج Excel بعلامة اليساوي (=)", answer: true },
+            { text: "تتكون الخلية من تقاطع العمود والصف", answer: true },
+            { text: "دالة MAX تُستخدم لحساب المتوسط الحسابي", answer: false },
+            { text: "البيانات هي معلومات تم تحليلها ومعالجتها بالفعل", answer: false },
+            { text: "المخطط الدائري مناسب لتوضيح النسبة المئوية من الكل", answer: true }
+        ];
+        let g2Index = 0;
+        let g2Score = 0;
+
+        function initGame2() {
+            g2Index = 0;
+            g2Score = 0;
+            renderG2Question();
+        }
+
+        function renderG2Question() {
+            const container = document.getElementById('game2-container');
+            document.getElementById('game2-score').innerText = `النقاط: ${g2Score}`;
+
+            if (g2Index >= game2Questions.length) {
+                container.innerHTML = `
+                    <div class="text-center space-y-2">
+                        <p class="text-xs text-gold-300 font-bold">رائع! أنهيت لعبة صح أو خطأ 🌟</p>
+                        <p class="text-xs text-gray-300">حققت ${g2Score} من ${game2Questions.length}</p>
+                        <button onclick="initGame2()" class="px-4 py-1.5 bg-gold-gradient text-black rounded-lg text-xs font-bold">إعادة اللعب</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const q = game2Questions[g2Index];
+            container.innerHTML = `
+                <p class="text-xs text-center text-white font-bold">${q.text}</p>
+                <div class="flex gap-2 justify-center">
+                    <button onclick="answerG2(true)" class="px-6 py-2 bg-green-600/30 border border-green-500 text-green-300 hover:bg-green-600 hover:text-white rounded-xl text-xs font-bold transition-all">صح ✔️</button>
+                    <button onclick="answerG2(false)" class="px-6 py-2 bg-red-600/30 border border-red-500 text-red-300 hover:bg-red-600 hover:text-white rounded-xl text-xs font-bold transition-all">خطأ ✖️</button>
+                </div>
+            `;
+        }
+
+        function answerG2(userAns) {
+            if (userAns === game2Questions[g2Index].answer) {
+                g2Score++;
+            }
+            g2Index++;
+            renderG2Question();
+        }
+
+        // GAME 3: Formula Ordering Game Logic
+        const g3CorrectOrder = ["=", "SUM", "(", "A1:A10", ")"];
+        let currentG3UserOrder = [];
+
+        function initGame3() {
+            currentG3UserOrder = [];
+            const container = document.getElementById('game3-container');
+            const shuffledParts = [...g3CorrectOrder].sort(() => Math.random() - 0.5);
+
+            container.innerHTML = `
+                <div class="text-center text-xs text-gray-400 mb-2">اضغط القطع بترتيب المعادلة الصحيح:</div>
+                <div id="g3-user-box" class="min-h-[40px] p-2 bg-darkbg border border-gold-500/30 rounded-xl flex items-center justify-center gap-2 font-mono text-gold-300 text-sm">
+                    <span class="text-xs text-gray-600">سيظهر الترتيب هنا...</span>
+                </div>
+                <div class="flex flex-wrap gap-2 justify-center pt-2" id="g3-pieces">
+                    ${shuffledParts.map(part => `
+                        <button onclick="addG3Piece('${part}', this)" class="px-3 py-1.5 bg-black border border-gray-700 hover:border-gold-400 rounded-lg text-xs font-mono text-gray-200">
+                            ${part}
+                        </button>
+                    `).join('')}
+                </div>
+                <div id="g3-status" class="text-[11px] text-center font-bold min-h-[16px]"></div>
+            `;
+        }
+
+        function addG3Piece(part, btn) {
+            currentG3UserOrder.push(part);
+            btn.disabled = true;
+            btn.classList.add('opacity-30');
+
+            const box = document.getElementById('g3-user-box');
+            box.innerText = currentG3UserOrder.join(' ');
+        }
+
+        function checkGame3() {
+            const status = document.getElementById('g3-status');
+            if (JSON.stringify(currentG3UserOrder) === JSON.stringify(g3CorrectOrder)) {
+                status.className = "text-[11px] text-center font-bold text-green-400";
+                status.innerText = "ترتيب صحيح 100%! تم بناء الصيغة بشكل سليم 🎯";
+            } else {
+                status.className = "text-[11px] text-center font-bold text-red-400";
+                status.innerText = "الترتيب غير صحيح، اضغط لإعادة المحاولة.";
+                setTimeout(() => initGame3(), 2000);
+            }
+        }
+    </script>
+</body>
+</html>
